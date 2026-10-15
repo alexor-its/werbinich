@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexander Ortha – Cloud Solution Architect | Strategic Hybrid Cloud Advisor | Presales Leader | Bridging Datacenter &amp; Cloud | Ex-Microsoft</title>
+<meta name="description" content="Alexander Ortha: Cloud Solution Architect für hybride Microsoft-Cloud-Plattformen (Azure Local, Azure Arc, Azure Virtual Desktop). 26 Jahre Microsoft, End-to-End-Verantwortung vom Zielbild bis in den Regelbetrieb.">
+<meta property="og:title" content="Alexander Ortha – Cloud Solution Architect">
+<meta property="og:description" content="Hybride Microsoft-Cloud vom Zielbild bis in den Regelbetrieb. Cloud Solution Architect für Hybrid &amp; Sovereign Cloud, Ex-Microsoft.">
+<meta property="og:type" content="profile">
+<style>
+  /* ---------- Tokens ---------- */
+  :root{
+    --ink:#14262D;        /* Hero-Hintergrund, Ueberschriften */
+    --ink-2:#1F3A43;      /* dunkler Verlaufston im Hero */
+    --mist:#EEF1F2;       /* Seitenhintergrund */
+    --paper:#FFFFFF;
+    --text:#1C2A30;
+    --muted:#5E6F76;
+    --line:#D4DCDF;
+    --teal:#1F7A8C;       /* Links, Buttons, Timeline */
+    --teal-dark:#165E6C;
+    --brass:#C9A24A;      /* ein einziger warmer Akzent */
+    --serif:"Charter","Iowan Old Style","Georgia","Times New Roman",serif;
+    --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--mist);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{color:var(--teal-dark)}
+  :focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0;color:var(--ink)}
+  h2{font-size:clamp(1.7rem,2.6vw,2.2rem);margin-bottom:1.4rem}
+  h3{font-size:1.2rem;margin-bottom:.4rem}
+  p{margin:0 0 1rem}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+  section{padding:clamp(3rem,7vw,5.5rem) 0}
+  section + section{border-top:1px solid var(--line)}
+
+  /* ---------- Topbar ---------- */
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(20,38,45,.96);backdrop-filter:blur(6px);color:#fff}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+  .brand{font-family:var(--serif);font-size:1.15rem;color:#fff;text-decoration:none;letter-spacing:.01em}
+  .nav{display:flex;gap:1.4rem;align-items:center}
+  .nav a{color:#D7E2E6;text-decoration:none;font-size:.95rem}
+  .nav a:hover{color:#fff}
+  .nav .cta{background:var(--brass);color:var(--ink);padding:.45rem .9rem;border-radius:4px;font-weight:600}
+  .nav .cta:hover{background:#D9B35E;color:var(--ink)}
+  @media (max-width:720px){.nav a:not(.cta){display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);color:#E8EEF0;padding:clamp(3rem,8vw,6rem) 0 clamp(3rem,7vw,5rem);border-top:none}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+  @media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+  .hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.6rem);max-width:17ch;margin-bottom:1.3rem}
+  .hero .who{font-size:1.05rem;color:#B9C8CE;margin-bottom:.5rem}
+  .hero .who strong{color:#fff;font-weight:600}
+  .hero .lead{font-size:1.15rem;max-width:56ch;color:#D7E2E6;margin-bottom:1.8rem}
+  .actions{display:flex;flex-wrap:wrap;gap:.75rem}
+  .btn{display:inline-block;padding:.75rem 1.25rem;border-radius:4px;text-decoration:none;font-weight:600;border:1px solid transparent;font-size:.98rem}
+  .btn-primary{background:var(--brass);color:var(--ink)}
+  .btn-primary:hover{background:#D9B35E;color:var(--ink)}
+  .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+  .btn-ghost:hover{border-color:#fff;color:#fff}
+  .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:1.4rem 1.5rem}
+  .portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.25);margin-bottom:1.1rem;background:#2A4650}
+  .monogram{width:132px;height:132px;border-radius:50%;display:none;align-items:center;justify-content:center;font-family:var(--serif);font-size:2.6rem;color:#fff;background:#2A4650;border:3px solid rgba(255,255,255,.25);margin-bottom:1.1rem}
+  .facts{list-style:none;margin:0;padding:0}
+  .facts li{padding:.55rem 0;border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:7.5rem 1fr;gap:.6rem;font-size:.95rem}
+  .facts li:first-child{border-top:none;padding-top:0}
+  .facts span{color:#9FB3BA}
+  .facts a{color:#fff}
+  .avail{display:inline-block;background:rgba(201,162,74,.18);color:#EBD39A;border-radius:3px;padding:.15rem .5rem;font-size:.9rem}
+
+  /* ---------- Profil / Wertbeitrag ---------- */
+  .two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem)}
+  @media (max-width:860px){.two{grid-template-columns:1fr}}
+  .lede{font-size:1.1rem;line-height:1.6;max-width:60ch}
+  .value{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+  .value li{display:grid;grid-template-columns:12.5rem 1fr;gap:1.25rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+  .value li b{hyphens:auto;overflow-wrap:anywhere}
+  .value li b{color:var(--ink);font-weight:600}
+  @media (max-width:560px){.value li{grid-template-columns:1fr;gap:.2rem}}
+  .brings{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .brings li{padding:.75rem 0;border-bottom:1px solid var(--line)}
+  .ref .step{margin-bottom:.7rem}
+  .ref .step{margin-bottom:.9rem}
+  .ref .step:last-child{margin-bottom:0}
+  .ref .step b{display:block;color:var(--teal-dark);font-weight:600;font-size:.88rem;letter-spacing:.01em;margin-bottom:.15rem}
+  .how{columns:2;column-gap:2rem;padding-left:1.1rem;margin:0}
+  .how li{break-inside:avoid;margin-bottom:.6rem;padding-right:.25rem}
+  @media (max-width:720px){.how{columns:1}}
+  .sub{font-family:var(--sans);font-size:1.05rem;font-weight:600;margin:1.8rem 0 .6rem}
+
+  /* ---------- Referenzen ---------- */
+  .refs{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+  @media (max-width:860px){.refs{grid-template-columns:1fr}}
+  .ref{background:var(--paper);border-left:4px solid var(--teal);padding:1.4rem 1.6rem;border-radius:0 6px 6px 0}
+  .ref .meta{color:var(--muted);font-size:.9rem;margin-bottom:.3rem}
+  .ref p{margin-bottom:.6rem}
+  .ref .result b{color:var(--ink)}
+
+  /* ---------- Werdegang (Timeline) ---------- */
+  .timeline{list-style:none;margin:0;padding:0;position:relative}
+  .timeline::before{content:"";position:absolute;left:7.4rem;top:.6rem;bottom:.6rem;width:2px;background:var(--line)}
+  .timeline li{display:grid;grid-template-columns:6.4rem 1fr;gap:2rem;padding:0 0 1.9rem;position:relative}
+  .timeline li::after{content:"";position:absolute;left:calc(7.4rem - 5px);top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--teal);border:2px solid var(--mist)}
+  .timeline .when{color:var(--muted);font-size:.92rem;padding-top:.15rem;text-align:right}
+  .timeline h3{font-family:var(--sans);font-size:1.05rem;font-weight:600;margin-bottom:.1rem}
+  .timeline .org{color:var(--muted);font-size:.95rem;margin-bottom:.45rem}
+  .timeline ul{margin:0;padding-left:1.1rem}
+  .timeline ul li{display:list-item;padding:0 0 .25rem;grid-template-columns:none}
+  .timeline ul li::after{display:none}
+  .timeline .sum{margin:0;max-width:70ch}
+  @media (max-width:640px){
+    .timeline::before{left:.35rem}
+    .timeline li{grid-template-columns:1fr;gap:.2rem;padding-left:1.6rem}
+    .timeline li::after{left:calc(.35rem - 5px)}
+    .timeline .when{text-align:left}
+  }
+
+  /* ---------- Kompetenzen ---------- */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+  .chips{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:0;list-style:none}
+  .chips li{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:.3rem .65rem;font-size:.95rem}
+  .plain{margin:0;padding-left:1.1rem}
+  .plain li{margin-bottom:.3rem}
+
+  /* ---------- Kontakt ---------- */
+  .contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,4rem)}
+  @media (max-width:860px){.contact{grid-template-columns:1fr}}
+  .contact .direct p{margin-bottom:.5rem}
+  form{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1.5rem}
+  label{display:block;font-weight:600;font-size:.92rem;margin:0 0 .3rem}
+  .field{margin-bottom:1rem}
+  input[type=text],input[type=email],textarea{width:100%;font:inherit;padding:.65rem .75rem;border:1px solid #B8C4C9;border-radius:4px;background:#fff;color:var(--text)}
+  input:focus,textarea:focus{border-color:var(--teal);outline:none;box-shadow:0 0 0 3px rgba(31,122,140,.18)}
+  textarea{min-height:140px;resize:vertical}
+  .consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.9rem;font-weight:400;margin-bottom:1.1rem}
+  .consent input{margin-top:.3rem}
+  .btn-send{background:var(--teal);color:#fff;border:none;font:inherit;font-weight:600;padding:.75rem 1.3rem;border-radius:4px;cursor:pointer}
+  .btn-send:hover{background:var(--teal-dark)}
+  .btn-send[disabled]{opacity:.6;cursor:default}
+  .status{margin-top:.9rem;font-size:.95rem;min-height:1.4em}
+  .status.ok{color:#1F6B3A}
+  .status.err{color:#9B2C2C}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+  /* ---------- Footer / Rechtliches ---------- */
+  footer{background:var(--ink);color:#B9C8CE;padding:3rem 0 2.5rem;font-size:.92rem}
+  footer a{color:#D7E2E6}
+  footer details{border-top:1px solid rgba(255,255,255,.12);padding:.9rem 0}
+  footer summary{cursor:pointer;color:#fff;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  footer summary::-webkit-details-marker{display:none}
+  footer summary::after{content:"+";font-size:1.3rem;color:var(--brass)}
+  footer details[open] summary::after{content:"–"}
+  footer details p,footer details ul{max-width:70ch}
+  .foot-line{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.12)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Alexander Ortha</a>
+    <nav class="nav" aria-label="Seitennavigation">
+      <a href="#profil">Profil</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#werdegang">Werdegang</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="cta" href="Lebenslauf_Alexander_Ortha.pdf" download>Lebenslauf (PDF)</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="who"><strong>Alexander Ortha</strong><br>Cloud Solution Architect | Strategic Hybrid Cloud Advisor | Presales Leader | Bridging Datacenter &amp; Cloud | Ex-Microsoft</p>
+      <h1>Hybride Microsoft-Cloud vom Zielbild bis in den Regelbetrieb.</h1>
+      <p class="lead">Über 26 Jahre bei Microsoft, zuletzt als Global Black Belt für Azure Local und Azure Arc in EMEA. Heute verantworte ich Hybrid-Plattformen End-to-End inkl. der Architektur, Automatisierung, Governance und Übergabe in den Kundenbetrieb.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="Lebenslauf_Alexander_Ortha.pdf" download>Lebenslauf herunterladen</a>
+        <a class="btn btn-ghost" href="#kontakt">Gespräch vereinbaren</a>
+      </div>
+    </div>
+
+    <aside class="hero-card" aria-label="Auf einen Blick">
+      <!-- Foto als img/foto.jpg ablegen. Fehlt die Datei, erscheint automatisch das Monogramm. -->
+      <img class="portrait" src="img/foto.jpg" alt="Portrait von Alexander Ortha" onerror="this.style.display='none';document.getElementById('mono').style.display='flex';">
+      <div class="monogram" id="mono" aria-hidden="true">AO</div>
+      <ul class="facts">
+        <li><span>Status</span><div><span class="avail">Offen für eine Festanstellung</span></div></li>
+        <li><span>Rolle</span><div>Cloud Solution Architect für Hybrid &amp; Sovereign Cloud, Presales Leader</div></li>
+        <li><span>Schwerpunkt</span><div>Azure Local, Azure Arc, Azure Virtual Desktop, Azure Management Services (z.&nbsp;B. Azure Update Manager), Windows Server, Azure Infrastruktur, Governance &amp; IaC</div></li>
+        <li><span>Hintergrund</span><div>30+ Jahre IT, davon 26 Jahre Microsoft Deutschland</div></li>
+        <li><span>Standort</span><div>Senden, Deutschland – remote und vor Ort</div></li>
+        <li><span>Sprachen</span><div>Deutsch (Muttersprache), Englisch (verhandlungssicher)</div></li>
+        <li><span>Kontakt</span><div><a href="mailto:alexander@ortha.eu">E-Mail an Alexander@Ortha.eu</a><br><a href="https://www.linkedin.com/in/alexanderortha/" rel="me noopener" target="_blank">LinkedIn</a><br><a href="https://www.youtube.com/@alexanderortha8490/streams" rel="me noopener" target="_blank">YouTube: Azure Hybrid Insider</a></div></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ======================= PROFIL ======================= -->
+<section id="profil">
+  <div class="wrap two">
+    <div>
+      <h2>Wer bin ich</h2>
+      <p class="lede">Ich bringe hybride Microsoft-Cloud-Plattformen vom Zielbild bis in den Regelbetrieb, inklusive Governance und Automatisierung als Fundament und Verantwortung über alle Ebenen hinweg.</p>
+      <p>Als Cloud Solution Architect bringe ich über 30 Jahre Erfahrung in der IT- und Cloud-Branche mit, davon 26 Jahre bei Microsoft. Spezialisiert auf hybride und souveräne Microsoft-Cloud-Plattformen mit Azure Local, Azure Arc und Azure Virtual Desktop. Gestartet von den Anforderungen und der Zielarchitektur über Landing Zones, Governance und Infrastructure as Code bis zur Übergabe in den Betrieb.</p>
+      <p>Als Strategic Hybrid Cloud Advisor und Presales Leader bei Microsoft begleitete ich Enterprise-Kunden vom klassischen Rechenzentrum in die Cloud. Dazu zählen Cloud-Migration, VMware-Ablösung und souveräne Cloud-Szenarien für DAX-40-, Fortune-500- und Public-Sector-Kunden. Dabei entstanden eine Vertriebspipeline im zweistelligen Millionenbereich und die Anbindung von über 100.000 Servern an Azure Arc. Erfahrungen im Business Development, Stakeholder Management, Executive-Workshops und der Zusammenarbeit mit internationalen Vertriebsorganisationen, Produktteams und Implementierungspartnern ergänzen meine technische Expertise.</p>
+      <h3 class="sub">Auf einen Blick</h3>
+      <ul class="how">
+        <li>Ex-Microsoft: 26 Jahre, zuletzt Global Black Belt für Azure Local und Azure Arc in EMEA</li>
+        <li>Seit November 2025 freier Cloud Solution Architect für Hybrid- und Sovereign-Cloud (u. a. Azure Public, Azure Local, Azure Arc, Azure Virtual Desktop, Azure Management Services)</li>
+        <li>End-to-End-Verantwortung: von der Ausschreibung bis zur Zielarchitektur, Umsetzung mit Infrastructure as Code (PowerShell, Azure CLI, ARM, AI-assisted entwickelt) und Übergabe an den Kundenbetrieb</li>
+        <li>Zwei aktuelle Referenzen: Hybrid-Transformation eines Kunden der öffentlichen Hand und Greenfield-Aufbau einer Azure-Local-Plattform für einen EU-Kunden</li>
+        <li>Sprecher auf ExpertsLive und CDC Germany 2026</li>
+        <li>Presales-Erfahrung aus hunderten Kundenkontakten und Community-Aufbau bei Microsoft</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Was ich Ihrem Unternehmen bringe</h2>
+      <ul class="brings">
+        <li>Geschäftsziele übersetze ich in tragfähige Architekturen und treffe Technologieentscheidungen auch dort, wo Kunde oder Hersteller noch keine fertige Antwort haben</li>
+        <li>Technische Cloud-Leitplanken wie Landing Zones, Policies, Tagging und Automatisierung setze ich passend zur Größe des Unternehmens</li>
+        <li>Betrieb, Sicherheit und Kosten berücksichtige ich von Anfang an, nicht erst nach dem Go-live</li>
+        <li>Ich arbeite hands-on (mache mir gerne die Hände „schmutzig“), mit Verantwortung für Architektur und Betrieb statt für Folien und Forecasts</li>
+        <li>Mein Wissen gebe ich gerne weiter: an Kundenteams, in Vorträgen und in die Community</li>
+        <li>Technik und Business verbinde ich mit Presales- und Advisory-Erfahrung bis auf Entscheiderebene; Technologien bewerte ich, statt sie zu verkaufen</li>
+        <li>Ich bringe ein belastbares Netzwerk innerhalb von Microsoft und in der Community mit</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REFERENZEN ======================= -->
+<section id="referenzen">
+  <div class="wrap">
+    <h2>Aktuelle Referenzen</h2>
+    <p class="lede" style="margin-bottom:2rem">Nach 26 Jahren bei Microsoft, in denen ich die Hybrid Cloud von Azure mitgestaltet habe, will ich jetzt dorthin, wo diese Technologie wirklich ankommt: zu den Kunden und ihren Herausforderungen.</p>
+    <div class="refs">
+      <article class="ref">
+        <p class="meta">Kunde der öffentlichen Hand, seit Ende 2025</p>
+        <h3>Hybride Modernisierung des Rechenzentrums</h3>
+        <div class="step"><b>Ausgangssituation</b>Der Kunde betreibt seine Server-Infrastruktur (300+ Server) auf Azure Local und wollte den bisherigen, auf WSUS und SCVMM basierenden Patch-Prozess ablösen sowie seine Terminal-Server-Landschaft (ca. 1.500 gleichzeitige Benutzer) modernisieren. Für das weitere Server-Management ist die System-Center-Suite im Einsatz.</div>
+        <div class="step"><b>Vorgehensweise</b>Ich konzipierte und implementierte ein zentrales, cloudbasiertes Patch-Management über Azure Arc und den Azure Update Manager inklusive Onboarding der Hyper-V-Cluster und VMs, Inventory, Policies, Monitoring, Alerting und Microsoft Defender for Cloud. Darauf aufbauend leitete ich einen Proof of Concept für Azure Virtual Desktop (AVD) auf Azure Local mit Windows 11 Multi-Session in einer Private-Networking-Architektur. Infrastructure as Code auf Basis von PowerShell, Azure CLI und ARM, AI-assisted entwickelt, ist dabei ein Erfolgsfaktor.</div>
+        <div class="step"><b>Ergebnis</b>Der Proof of Concept wurde erfolgreich abgeschlossen. Der Kunde entschied sich für die Produktivsetzung von AVD als Ersatz der Remote-Desktop-Umgebung und beauftragte mich mit der weiteren Umsetzung und Betriebsbegleitung. Ergänzend verantworte ich ein automatisiertes Framework zur Überführung von über 300 VMs auf Azure Local; die Produktivsetzung von AVD ist bis April 2027 geplant.</div>
+      </article>
+      <article class="ref">
+        <p class="meta">EU-Kunde (Bulgarien), Greenfield</p>
+        <h3>Eigene Azure-Location im Rechenzentrum</h3>
+        <div class="step"><b>Ausgangslage</b>Der Kunde wollte eine eigene Azure-Location im Rechenzentrum aufbauen, um Virtualisierung, Container, Workplace und KI-Workloads auf einer einheitlichen, souveränen Plattform zu betreiben.</div>
+        <div class="step"><b>Vorgehensweise</b>Angefangen beim Angebot verantwortete ich als Cloud Solution Architect den Greenfield-Aufbau einer Sechs-Knoten-Plattform auf Azure Local: vom Netzwerkdesign und der Hardware-Spezifikation über die Azure-Integration bis zum vollständig skriptgesteuerten Deployment mit PowerShell und Azure CLI.</div>
+        <div class="step"><b>Ergebnis</b>Die Plattform wurde mit Ausfall- und Leistungstests validiert, inklusive Betriebsdokumentation übergeben und das Kundenteam für den Eigenbetrieb befähigt. Der Kunde hat damit eine hybride Basis, die er selbst weiterentwickeln kann. Ein Folgeprojekt zur Einführung von KI-Szenarien mit Azure AI Foundry auf Azure Local ist in Vorbereitung.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WERDEGANG ======================= -->
+<section id="werdegang">
+  <div class="wrap">
+    <h2>Werdegang in Kürze</h2>
+    <ol class="timeline">
+      <li>
+        <div class="when">seit 11/2025</div>
+        <div>
+          <h3>Freiberuflicher Cloud Solution Architect, Hybrid &amp; Sovereign Cloud</h3>
+          <p class="org">Alexander Ortha IT Solutions, Senden</p>
+          <p class="sum">End-to-End-Verantwortung im Kundenprojekt: von Ausschreibung und Angebot über die Zielarchitektur bis zur Umsetzung mit Infrastructure as Code und der Übergabe in den Kundenbetrieb. Aufgebaut parallel zum Austritt bei Microsoft zum 30.06.2026.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">2023 – 2026</div>
+        <div>
+          <h3>Global Black Belt, Senior Specialist Advanced Migration / Azure Arc, EMEA</h3>
+          <p class="org">Microsoft Deutschland GmbH</p>
+          <p class="sum">Vertriebspipeline im zweistelligen Millionenbereich, über 100.000 Server per Azure Arc angebunden, Proof-of-Concepts bei DAX-40- und Fortune-500-Konzernen, Beratung von Behörden und Defense zu souveränen, teils air-gapped Szenarien.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">2020 – 2023</div>
+        <div>
+          <h3>Global Black Belt, Senior Specialist Hybrid Solutions, EMEA</h3>
+          <p class="org">Microsoft Deutschland GmbH</p>
+          <p class="sum">EMEA-Techlead für Azure Stack Hub, Aufbau einer Defense-, Government- und Sovereign-Cloud-Pipeline, rund 50 neue Kunden für Azure Hybrid, Start der „Azure Arc Show“ auf YouTube.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">2017 – 2020</div>
+        <div>
+          <h3>Global Black Belt, Senior Technology Solutions Professional Azure Stack, EMEA</h3>
+          <p class="org">Microsoft Deutschland GmbH</p>
+          <p class="sum">Einführung von Azure Stack in DACH mit über 20 Proof-of-Concepts und 14 Kundenreferenzen, erste Public-Sector- und Defense-Szenarien.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">2007 – 2017</div>
+        <div>
+          <h3>Senior Technology Solutions Professional</h3>
+          <p class="org">Microsoft Deutschland GmbH</p>
+          <p class="sum">Technischer Fachvertrieb und Lösungsarchitektur für Datacenter, Windows Server und Azure Infrastructure bei Enterprise-Kunden.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">1999 – 2007</div>
+        <div>
+          <h3>Trainee, IT Consultant und technischer Teilprojektleiter Infrastruktur</h3>
+          <p class="org">Microsoft Deutschland GmbH</p>
+          <p class="sum">Einstieg bei Microsoft als Trainee, danach Consulting und technische Teilprojektleitung in bundesweiten Infrastrukturprojekten: Migrationsstrategien, Kundenschulung, Workshops und Presales-Unterstützung.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">1990 – 1999</div>
+        <div>
+          <h3>Ausbildung und erste Stationen</h3>
+          <p class="org">Deutsche Telekom, Hausböck, Ingram Micro, debis PCM</p>
+          <p class="sum">Ausbildung zum Kommunikationselektroniker Telekommunikationstechnik bei der Deutschen Telekom, anschließend Sicherheitstechnik, LAN Supervisor bei Ingram Micro und NT-Systemadministrator bei debis PCM.</p>
+        </div>
+      </li>
+    </ol>
+    <p style="margin:1.5rem 0 0;color:var(--muted)">Alle Stationen im Detail stehen im <a href="Lebenslauf_Alexander_Ortha.pdf" download>Lebenslauf (PDF)</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= ZERTIFIZIERUNGEN ======================= -->
+<section id="mehr" style="padding-top:clamp(2rem,5vw,3.5rem);padding-bottom:clamp(2rem,5vw,3.5rem)">
+  <div class="wrap">
+    <div class="skills">
+      <div>
+        <h3>Zertifizierungen</h3>
+        <ul class="plain">
+          <li>AZ-104 Azure Administrator Associate</li>
+          <li>AZ-300 / AZ-301 Azure Architect Technologies &amp; Design</li>
+          <li>AZ-600 Azure Stack Hub Operator Associate</li>
+          <li>AZ-800 Windows Server Hybrid Core Infrastructure</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Vorträge &amp; Community</h3>
+        <ul class="plain">
+          <li>Sprecher auf ExpertsLive und CDC Germany 2026</li>
+          <li>Keynotes und Sessions mit bis zu 430 Teilnehmenden</li>
+          <li>YouTube-Kanal <a href="https://www.youtube.com/@alexanderortha8490/streams" rel="noopener" target="_blank">„Azure Hybrid Insider“</a> und deutschsprachiges Hybrid-Briefing</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Branchen</h3>
+        <p style="margin:0">Public Sector &amp; Defense, Automotive, Pharma &amp; Life Sciences, Finanzdienstleistung, Handel, Fertigung &amp; Industrie</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= KONTAKT ======================= -->
+<section id="kontakt">
+  <div class="wrap contact">
+    <div class="direct">
+      <h2>Lassen Sie uns sprechen</h2>
+      <p>Ich freue mich über ein Gespräch zu Aufgaben als Cloud Solution Architect im Hybrid- und Sovereign-Cloud-Umfeld.</p>
+      <p><a href="mailto:alexander@ortha.eu">E-Mail an Alexander@Ortha.eu</a></p>
+      <p><a href="https://www.linkedin.com/in/alexanderortha/" rel="me noopener" target="_blank">LinkedIn-Profil</a></p>
+      <p><a href="https://www.youtube.com/@alexanderortha8490/streams" rel="me noopener" target="_blank">YouTube-Kanal „Azure Hybrid Insider“</a></p>
+      <p><a href="Lebenslauf_Alexander_Ortha.pdf" download>Lebenslauf als PDF</a></p>
+    </div>
+
+    <!-- Web3Forms: Access Key unter https://web3forms.com erzeugen und unten eintragen. -->
+    <form id="kontaktform" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="HIER-DEINEN-WEB3FORMS-ACCESS-KEY-EINTRAGEN">
+      <input type="hidden" name="subject" value="Kontaktanfrage über karriere.ortha.eu">
+      <input type="hidden" name="from_name" value="karriere.ortha.eu">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="company">Unternehmen (optional)</label>
+        <input type="text" id="company" name="company" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <label class="consent">
+        <input type="checkbox" id="consent" required>
+        <span>Ich bin einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage verarbeitet werden. Details in der <a href="#datenschutz">Datenschutzerklärung</a>.</span>
+      </label>
+      <button class="btn-send" type="submit">Nachricht senden</button>
+      <p class="status" id="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER / RECHTLICHES ======================= -->
+<footer>
+  <div class="wrap">
+    <details id="impressum">
+      <summary>Impressum</summary>
+      <p>Angaben gemäß § 5 DDG<br>
+      Alexander Ortha<br>
+      Alexander Ortha IT Solutions<br>
+      [Straße und Hausnummer]<br>
+      [PLZ] Senden<br>
+      E-Mail: alexander@ortha.eu<br>
+      [Umsatzsteuer-ID, falls vorhanden]</p>
+      <p>Verantwortlich für den Inhalt: Alexander Ortha, Anschrift wie oben.</p>
+    </details>
+
+    <details id="datenschutz">
+      <summary>Datenschutzerklärung</summary>
+      <p><b>Verantwortlicher</b><br>Alexander Ortha, Anschrift siehe Impressum, alexander@ortha.eu.</p>
+      <p><b>Hosting</b><br>Diese Seite wird bei GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Beim Aufruf werden technisch notwendige Daten (IP-Adresse, Zeitpunkt, aufgerufene Seite, Browser) in Server-Logs verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer Betrieb der Seite). GitHub ist unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" target="_blank">GitHub Privacy Statement</a>.</p>
+      <p><b>Kontaktformular</b><br>Wenn Sie das Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail, ggf. Unternehmen, Nachricht) über den Dienst Web3Forms an mich per E-Mail übermittelt. Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) zur Bearbeitung Ihrer Anfrage. Web3Forms speichert die Inhalte nicht dauerhaft; Details unter <a href="https://web3forms.com/privacy" rel="noopener" target="_blank">web3forms.com/privacy</a>. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind.</p>
+      <p><b>Keine Cookies, keine Analyse</b><br>Diese Seite setzt keine Cookies und verwendet keine Tracking- oder Analysedienste. Schriften werden lokal vom Betriebssystem geladen, es werden keine externen Font-Dienste eingebunden.</p>
+      <p><b>Ihre Rechte</b><br>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Außerdem können Sie sich bei einer Datenschutzaufsichtsbehörde beschweren.</p>
+    </details>
+
+    <div class="foot-line">
+      <span>© 2026 Alexander Ortha</span>
+      <span><a href="#top">Nach oben</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Formular per fetch senden, damit die Seite nicht verlassen wird.
+  (function(){
+    var form = document.getElementById('kontaktform');
+    var status = document.getElementById('status');
+    var btn = form.querySelector('button[type=submit]');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      status.className = 'status';
+      if(!form.checkValidity()){
+        status.textContent = 'Bitte füllen Sie Name, E-Mail und Nachricht aus und bestätigen Sie die Einwilligung.';
+        status.classList.add('err');
+        return;
+      }
+      btn.disabled = true;
+      status.textContent = 'Wird gesendet …';
+      var data = new FormData(form);
+      data.delete('consent');
+      fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' } })
+        .then(function(r){ return r.json(); })
+        .then(function(res){
+          if(res.success){
+            form.reset();
+            status.textContent = 'Vielen Dank, Ihre Nachricht ist angekommen. Ich melde mich zeitnah.';
+            status.classList.add('ok');
+          } else {
+            throw new Error(res.message || 'Unbekannter Fehler');
+          }
+        })
+        .catch(function(){
+          status.textContent = 'Die Nachricht konnte nicht gesendet werden. Bitte schreiben Sie direkt an alexander@ortha.eu.';
+          status.classList.add('err');
+        })
+        .then(function(){ btn.disabled = false; });
+    });
+  })();
+</script>
+</body>
+</html>
